@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=oVFmlEBhAIBz&format=png&color=000000" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio Rian</title>
+</head>
+<body>
+    <header>
+            <nav class="navbar">
+                <img src="./images/autor.jpg" alt="foto autor">
+                <h1>Rian Santos</h1>
+                <ul class="navlist">
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="#about" onclick="clickAbout()">SOBRE MIM</a></li>
+                    <li><a href="#projects" onclick="clickProjects()">PROJETOS</a></li>
+                    <li><a href="#contact" class="nav-contato" onclick="clickContato()">CONTATO</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+    <div class="container">
+        <section class="about">
+            <h2 style="text-align: center; text-transform: uppercase;">Olá, eu sou Rian Santos</h2>
+            <p>Eu sou um desenvolvedor full stack Web apaixonado por criar soluções inovadoras.</p>
+        </section>
+        
+        <section class="container-projects">
+            <h2>Projetos</h2>
+            <div class="projects">
+                <div class="project">
+                    <a href="https://cinema-cine-vault.slpccc.easypanel.host/" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/cineValt.png" alt="cineValt">
+                    </a>
+                    <h3>Catalogo de filmes & series</h3>
+                </div>
+                <div class="project">
+                    <a href="https://animesf.vercel.app/" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/animes.png" alt="animes Favoritos">
+                    </a>
+                    <h3>Animes Favoritos</h3>
+                </div>
+                <div class="project">
+                    <a href="https://ryanms2.github.io/projeto-pokedex/" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/pokedex.png" alt="pokedex">
+                    </a>
+                    <h3>pokedex</h3>
+                </div>
+                <div class="project">
+                    <a href="https://ryanms2.github.io/projeto-listaTarefa/" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/todo.png" alt="Lista de tarefas">
+                    </a>
+                    <h3>Lista de tarefas</h3>
+                </div>
+            </div>
+            
+        </section>
+        <section class="contact">
+                <a href="https://www.linkedin.com/in/riansan" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000" alt="linkedin">
+                </a>
+                <a href="https://github.com/ryanms2" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000" alt="github">
+                </a>
+                <a href="https://instagram.com/ryan_ms2" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.icons8.com/?size=100&id=32309&format=png&color=000000" alt="linkedin">
+                </a>
+                <a href="mailto:riansantos355@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.icons8.com/?size=100&id=pJJmXPomYuPv&format=png&color=000000" alt="email">
+                </a>
+
+        </section>
+    </div>
+    
+    <script>
+        const link = document.getElementsByClassName('.nav-contato');
+
+        clickContato = () => {
+            document.querySelector('.contact').className = 'contact-active';
+            setTimeout(() => {
+                document.querySelector('.contact-active').className = 'contact';
+            }, 1000);
+        }
+
+        clickProjects = () => {
+            document.querySelector('.container-projects').className = 'container-projects-active';
+            setTimeout(() => {
+                document.querySelector('.container-projects-active').className = 'container-projects';
+            }, 1000);
+        }
+
+        clickAbout = () => {
+            document.querySelector('.about').className = 'about-active';
+            setTimeout(() => {
+                document.querySelector('.about-active').className = 'about';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

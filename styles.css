@@ -1,0 +1,163 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap');
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #F1F1F1;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #FFFFFF;
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.navbar img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.navbar h1 {
+    flex: 1;
+    text-align: start;
+    padding-left: 10px;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.navlist {
+    display: flex;
+    width: 30%;
+    list-style: none;
+    right: 10px;
+    justify-content: space-between;
+    margin-right: 60px;
+}
+
+.navlist a {
+    text-decoration: none;
+    color: black;
+}
+
+.about-active {
+    animation: vibrar 0.1s infinite;
+}
+
+
+.container-projects {
+    margin: 15px;
+}
+
+.container-projects-active {
+    margin: 15px;
+    animation: vibrar 0.1s infinite;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+    width: 100%;
+    height: 300px;
+    padding: 0;
+    margin: 0;
+    background-color: #F1F1F1;
+    overflow: auto;
+}
+
+.project {
+    width: 50%;
+    height: 200px;
+    margin: 10px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.project img:hover {
+    transform: scale(1.1);
+    filter: blur(0.5px);
+    transition: transform 0.3s, filter 0.3s ;
+}
+
+.project h3 {
+    text-align: center;
+    margin: 0;
+}
+
+.contact {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 5%;
+    height: 40%;
+    right: 7px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.contact a {
+    padding: 10px 0;
+}
+
+.contact img {
+    width: 32px;
+    height: 32px;
+}
+
+.contact-active {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 5%;
+    height: 40%;
+    right: 32px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    animation: vibrar 0.1s infinite;
+}
+
+@keyframes vibrar {
+    0% {transform: translate(0, 0);}
+    25% {transform: translate(2px, 2px);}
+    50% {transform: translate(0, 2px);}
+    75% {transform: translate(-2px, 2px);}
+    100% {transform: translate(0, 0);}
+}
